@@ -30,9 +30,9 @@ Mongo Backup Manager
       }
       .option 'zip', {
         abbr : 'z'
-        flag : true
-        default : false
-        help : 'Set it to do a zip file from the dumped data\n\t\tIt will also delete the original dump'
+        flag : false
+        default : true
+        help : 'Set it to create a zip file from the dumped data. It will delete the dumped data after zip creation'
       }
       .parse()
 
@@ -114,7 +114,7 @@ Mongo Backup Manager
       console.log 'Dump finished on:'.green,('dumps/'+dumpDir).magenta.underline
       console.log 'Zipping dumped data, this might take a while ...'.yellow
 
-      if opts.zip
+      unless opts.nozip
         zipping = spawn 'zip', ['-9r','dumps/'+dumpDir+'.zip','dumps/'+dumpDir]
 
         zipping.stderr.on 'data', (data)->

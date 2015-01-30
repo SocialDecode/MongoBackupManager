@@ -1,6 +1,6 @@
 {
   "name": "mongobackupmanager",
-  "version": "0.15.0129a",
+  "version": "0.15.0129b",
   "description": "Configurable and flexible mongoDB backup generator, with this you can specify a collection or several collections to skip from the dump",
   "main": "index.js",
   "scripts": {
