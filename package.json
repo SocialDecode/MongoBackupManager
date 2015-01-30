@@ -1,10 +1,11 @@
 {
   "name": "mongobackupmanager",
-  "version": "0.40.0",
+  "version": "0.15.0129a",
   "description": "Configurable and flexible mongoDB backup generator, with this you can specify a collection or several collections to skip from the dump",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "nodemon lib/MongoBackupManager.litcoffee"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,10 @@
     "url": "https://github.com/SocialDecode/MongoBackupManager/issues"
   },
   "homepage": "https://github.com/SocialDecode/MongoBackupManager",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-coffee": "^0.11.1",
-    "grunt-contrib-watch": "^0.6.1"
-  },
   "dependencies": {
-    "mongodb": "^1.4.17"
+    "coffee-script": "^1.9.0",
+    "consolecolors": "0.33.2-b",
+    "mongodb": "1.4.17",
+    "nomnom": "^1.8.1"
   }
 }
