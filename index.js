@@ -1,2 +1,2 @@
 require('coffee-script/register');
-require('./lib/MongoBackupManager.litcoffee');
+require('./lib/MongoBackupManager.coffee');
